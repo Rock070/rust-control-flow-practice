@@ -151,7 +151,7 @@ pub fn christmas_gen() -> String {
                 lyrics.push_str("And ");
             }
 
-            let sen: String = if paragraph != 0 && sentence == 0 {
+            let sen = if paragraph != 0 && sentence == 0 {
                 paragraph_list[sentence].to_lowercase()
             } else {
                 paragraph_list[sentence].to_string()
@@ -159,11 +159,9 @@ pub fn christmas_gen() -> String {
 
             lyrics.push_str(&sen);
 
-            if sentence == 0 {
-                lyrics.push_str(".");
-            } else {
-                lyrics.push_str(",");
-            }
+            let end_of_sentence = if sentence == 0 { "." } else { "," };
+
+            lyrics.push_str(end_of_sentence);
 
             if !(paragraph == 11 && sentence == 0) {
                 lyrics.push_str("\n");
