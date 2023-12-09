@@ -166,22 +166,21 @@ pub fn christmas_gen() -> String {
             }
 
             if !(paragraph == 11 && sentence == 0) {
-              lyrics.push_str("\n");
+                lyrics.push_str("\n");
             }
         }
-        
+
         if paragraph != 11 {
-          lyrics.push_str("\n");
+            lyrics.push_str("\n");
         }
     }
 
     return lyrics;
 }
 
-
 fn test() {
-  let lyrics = christmas_gen();
-  assert_eq!(ANSWER, lyrics, "運算結果與歌詞相符");
+    let lyrics = christmas_gen();
+    assert_eq!(ANSWER, lyrics, "運算結果與歌詞相符");
 }
 
 pub fn print_christmas() {
@@ -189,6 +188,6 @@ pub fn print_christmas() {
     test();
 
     let lyrics = christmas_gen();
-    println!("The Twelve Days of Christmas: \n\n{}\n", lyrics);    
-    println!("歌詞與印出結果相符: {}", lyrics == ANSWER);    
+    println!("The Twelve Days of Christmas: \n\n{}\n", lyrics);
+    println!("歌詞與印出結果相符: {}", lyrics == ANSWER);
 }
