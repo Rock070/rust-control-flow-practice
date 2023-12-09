@@ -189,3 +189,7 @@ pub fn print_christmas() {
     println!("The Twelve Days of Christmas: \n\n{}\n", lyrics);
     println!("歌詞與印出結果相符: {}", lyrics == ANSWER);
 }
+
+fn main() {
+    print_christmas();
+}

@@ -44,3 +44,7 @@ pub fn fibonacci() {
         println!("斐波那契數第 {} 項為 {}", number, fibonacci_dp(number));
     }
 }
+
+fn main() {
+    fibonacci();
+}

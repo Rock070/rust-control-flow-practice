@@ -6,3 +6,16 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+
+[[bin]]
+name = "hm1"
+path = "src/homework/hm1.rs"
+
+[[bin]]
+name = "hm2"
+path = "src/homework/hm2.rs"
+
+[[bin]]
+name = "hm3"
+path = "src/homework/hm3.rs"

@@ -41,3 +41,7 @@ pub fn temperature_transfer() {
     println!("{cel_temp} 度攝氏為 {fah} 華氏（Fahrenheit）");
     println!("{fah} 度華氏為 {cel} 攝氏（Celsius）");
 }
+
+fn main() {
+    temperature_transfer();
+}
