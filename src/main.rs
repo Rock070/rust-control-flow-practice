@@ -1,5 +1,8 @@
+mod homework {
+    pub mod temperature;
+}
 
-mod temperature;
+use homework::temperature;
 
 fn main() {
     let cel_temp = 36.0;
