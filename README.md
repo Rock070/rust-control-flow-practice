@@ -8,6 +8,8 @@
 
 ## Run
 
+### HomeWork
+
 ```bash
 cargo run --bin hm1
 cargo run --bin hm2
@@ -16,4 +18,10 @@ cargo run --bin hm3
 
 ```bash
 cargo run
+```
+
+### Interactive fabonacci
+
+```bash
+cargo run --bin fabonacci
 ```

@@ -19,3 +19,7 @@ path = "src/homework/hm2.rs"
 [[bin]]
 name = "hm3"
 path = "src/homework/hm3.rs"
+
+[[bin]]
+name = "fabonacci"
+path = "src/interactive/fabonacci.rs"
