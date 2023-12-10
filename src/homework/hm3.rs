@@ -139,19 +139,19 @@ pub fn christmas_gen() -> String {
 
     let mut lyrics = String::new();
 
-    for paragraph in 0..12 {
+    for (index, paragraph) in num_english.iter().enumerate() {
         lyrics.push_str(&format!(
             "On the {} day of Christmas,\n",
-            num_english[paragraph]
+            paragraph
         ));
         lyrics.push_str("My true love gave to me,\n");
 
-        for sentence in (0..=paragraph).rev() {
-            if paragraph != 0 && sentence == 0 {
+        for sentence in (0..=index).rev() {
+            if index != 0 && sentence == 0 {
                 lyrics.push_str("And ");
             }
 
-            let sen = if paragraph != 0 && sentence == 0 {
+            let sen = if index != 0 && sentence == 0 {
                 paragraph_list[sentence].to_lowercase()
             } else {
                 paragraph_list[sentence].to_string()
@@ -163,17 +163,17 @@ pub fn christmas_gen() -> String {
 
             lyrics.push_str(end_of_sentence);
 
-            if !(paragraph == 11 && sentence == 0) {
-                lyrics.push_str("\n");
+            if !(index == 11 && sentence == 0) {
+                lyrics.push('\n');
             }
         }
 
-        if paragraph != 11 {
-            lyrics.push_str("\n");
+        if index != 11 {
+            lyrics.push('\n');
         }
     }
 
-    return lyrics;
+    lyrics
 }
 
 fn test() {
